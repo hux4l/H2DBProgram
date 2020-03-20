@@ -4,8 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
           <Menu mnemonicParsing="false" text="Súbor">
@@ -27,19 +26,24 @@
       </HBox>
    </bottom>
    <center>
-      <TableView BorderPane.alignment="CENTER">
+      <TableView fx:id="table" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="col_id" prefWidth="91.0" text="Id zakaznika" />
+          <TableColumn fx:id="col_meno" prefWidth="94.0" text="Meno" />
+            <TableColumn fx:id="col_priezvisko" prefWidth="99.0" text="Priezvisko" />
+            <TableColumn fx:id="col_email" prefWidth="138.0" text="Email" />
+            <TableColumn fx:id="col_telefon" minWidth="0.0" prefWidth="116.0" text="Telefónne číslo" />
+            <TableColumn fx:id="col_datum" minWidth="0.0" prefWidth="113.0" text="Dátum" />
         </columns>
       </TableView>
    </center>
    <left>
       <Pane prefHeight="200.0" prefWidth="80.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Uprav" />
-            <Button layoutX="14.0" layoutY="39.0" mnemonicParsing="false" text="Pridaj" />
+            <Button fx:id="buttonUprav" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#upravUdaj" text="Uprav" />
+            <Button fx:id="btnNacitaj" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" onAction="#nacitajUdaje" text="Nacitaj" />
             <Button layoutX="14.0" layoutY="64.0" mnemonicParsing="false" text="Exportuj" />
+            <Label fx:id="labelTest" text="Label" />
          </children>
          <BorderPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="h2">
     <CLASSES>
-      <root url="file://$USER_HOME$/Desktop/h2/bin" />
+      <root url="jar://$USER_HOME$/Desktop/book/h2/bin/h2-1.4.200.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
-    <jarDirectory url="file://$USER_HOME$/Desktop/h2/bin" recursive="false" />
   </library>
 </component>

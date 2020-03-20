@@ -3,7 +3,7 @@ package sample;
 
 import java.sql.*;
 
-public class ConnectDatabase {
+public class ConnectDatabase extends Controller{
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "org.h2.Driver";
     static final String DB_URL = "jdbc:h2:~/data";
